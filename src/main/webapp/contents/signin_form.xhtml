@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Sign in</title>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <h:form>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="jumbotron">
+                            <div class="row">
+                                <h1 class="text-center">#{res.SystemName}</h1>
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="page-header">
+                                        <h2 class="text-center">#{res.Signin}</h2>
+                                        <p class="text-center">#{res.EnterYourCredencials}</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-8 col-xs-offset-2">
+                                            <div class="form-group">
+                                                <h:outputLabel for="">#{res.Email}</h:outputLabel>
+                                                <h:inputText class="form-control input-lg" p:placeholder="#{res.Email}" />
+                                            </div>
+                                            <div class="form-group">
+                                                <h:outputLabel for="">#{res.Password}</h:outputLabel>
+                                                <h:inputSecret class="form-control input-lg" p:placeholder="#{res.Password}" />
+                                            </div>
+                                            <!-- <h:commandButton class="btn btn-success btn-block" value="#{res.Signin}"/> -->
+                                            <h:link outcome="index" class="btn btn-success btn-lg btn-block"><i class="fa fa-sign-in"></i> #{res.Signin}</h:link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>メンバー管理</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p>名前<h:inputText value="#{adminMemberBean.name}"/></p>
+            <p>メール<h:inputText value="#{adminMemberBean.email}"/></p>
+            <p>パート<h:selectOneMenu value="#{adminMemberBean.part}">
+                <f:selectItems value="#{adminMemberBean.partItems}" />
+                </h:selectOneMenu>
+            </p>
+            <p>団員区分<h:selectOneMenu value="#{adminMemberBean.classification}">
+                <f:selectItems value="#{adminMemberBean.classItems}" />
+                </h:selectOneMenu>
+            </p>
+            <p>権限<h:selectOneMenu value="#{adminMemberBean.permission}">
+                <f:selectItems value="#{adminMemberBean.permissionItems}" />                    
+                </h:selectOneMenu>
+            </p>
+            <p><h:commandButton value="追加" actionListener="#{adminMemberBean.next()}" /></p>
+        </h:form>
+    </h:body>
+</html>
+
