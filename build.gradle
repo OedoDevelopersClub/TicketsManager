@@ -1,0 +1,14 @@
+apply plugin: 'java'
+//apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+    compile 'fish.payara.extras:payara-micro:4.1.153'
+
+    testCompile 'junit:junit:4.12'
+}
+
