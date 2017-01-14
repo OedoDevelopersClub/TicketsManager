@@ -10,6 +10,6 @@ public class Main {
     public static void main(String... args) throws BootstrapException {
 
         System.out.println("Hello, World!");
-        PayaraMicro.getInstance().setHttpPort(8080).bootStrap();
+        PayaraMicro.getInstance().addDeployment(args[0]).setHttpPort(8080).bootStrap();
     }
 }
