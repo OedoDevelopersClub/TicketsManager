@@ -1,5 +1,5 @@
 apply plugin: 'java'
-//apply plugin: 'application'
+apply plugin: 'application'
 apply plugin: 'war'
 
 repositories {
@@ -17,15 +17,19 @@ dependencies {
 sourceCompatibility = targetCompatibility = '1.8'
 
 war { 
-    archiveName = 'payara.war'
-    exclude('**/payara/**')
+    archiveName = 'tickets.war'
+    exclude('**/tickets/**')
 }
 
+sourceSets {
+    main {
+        output.resourcesDir = output.classesDir
+    }
+}
 
-//mainClassName = "Main"
+mainClassName = "net.oekora.Server"
 
-task run(type: JavaExec) {
+run {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'Main'
     args war.archivePath.path
 }
