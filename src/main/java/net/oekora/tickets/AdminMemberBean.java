@@ -62,11 +62,11 @@ public class AdminMemberBean {
     }
 
     public String adminMember(){
-        return "adminmember.xhtml";
+        return "faces/adminmember.xhtml";
     }
     
     public String next(){
-        return "confirmaddmember.xhtml";
+        return "faces/confirmaddmember.xhtml";
     }
     private String  name;
     private String  email;

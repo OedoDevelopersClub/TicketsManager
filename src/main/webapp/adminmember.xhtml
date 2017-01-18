@@ -11,18 +11,25 @@
             <p>名前<h:inputText value="#{adminMemberBean.name}"/></p>
             <p>メール<h:inputText value="#{adminMemberBean.email}"/></p>
             <p>パート<h:selectOneMenu value="#{adminMemberBean.part}">
-                <f:selectItems value="#{adminMemberBean.partItems}" />
+                    <f:selectItem itemLabel="トップ" itemValue="0" />
+                    <f:selectItem itemLabel="セカンド" itemValue="1" />
+                    <f:selectItem itemLabel="バリトン" itemValue="2" />
+                    <f:selectItem itemLabel="ベース" itemValue="3" />
                 </h:selectOneMenu>
             </p>
             <p>団員区分<h:selectOneMenu value="#{adminMemberBean.classification}">
-                <f:selectItems value="#{adminMemberBean.classItems}" />
+                    <f:selectItem itemLabel="一般" itemValue="0" />
+                    <f:selectItem itemLabel="学生" itemValue="1" />
+                    <f:selectItem itemLabel="地方" itemValue="2" />
+                    <f:selectItem itemLabel="地方学生" itemValue="3" />
                 </h:selectOneMenu>
             </p>
             <p>権限<h:selectOneMenu value="#{adminMemberBean.permission}">
-                <f:selectItems value="#{adminMemberBean.permissionItems}" />                    
+                    <f:selectItem itemLabel="一般" itemValue="0" />
+                    <f:selectItem itemLabel="管理者" itemValue="1" />
                 </h:selectOneMenu>
             </p>
-            <p><h:commandButton value="追加" actionListener="#{adminMemberBean.next()}" /></p>
+            <p><h:commandButton value="追加" action="#{adminMemberBean.next()}" /></p>
         </h:form>
     </h:body>
 </html>
